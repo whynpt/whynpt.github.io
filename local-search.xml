@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+  
+  <entry>
+    <title>cpp中的lambda表达式</title>
+    <link href="/2024/03/20/c-%E4%B8%AD%E7%9A%84lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
+    <url>/2024/03/20/c-%E4%B8%AD%E7%9A%84lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F/</url>
+    
+    <content type="html"><![CDATA[<h2 id="lambda"><a href="#lambda" class="headerlink" title="lambda"></a>lambda</h2><p>lambda是表达式，但可以作为右值赋给一个变量，比如<code>audo f = [] &#123;return 42&#125;</code>，所以这里f到底是什么类型，需要调试才知道。简单来说lambda表达式相当于匿名函数，它可以接收输入参数，还能返回结果。具体地，lambda表达式分为四部分，公式为<code>[capture list] (parameter list) -&gt; return type &#123; function body &#125;</code>。其中 <em>parameter list</em> 和 <em>return type</em> 可以省略。下面分别介绍这四部分。</p><ul><li><p><em>capture list</em><br>这部分中文名称为 <em>捕获列表</em> ，表示定义在其他函数内部的表达式可以使用该函数的局部变量。如下所示  </p><pre><code class="hljs">  void outter (int input) &#123;      int localVar = input * 2;      auto f = [localVar] (int lambdaVal) -&gt; int &#123;return localVar + lambdaVal;&#125;;      printf (&quot;%d\n&quot;, f(1));  &#125;</code></pre></li><li><p><em>parameter list</em><br>这部分是基本的输入参数列表，与普通函数一致</p></li><li><p><em>return type</em><br>定义返回值类型</p></li><li><p><em>function body</em><br>函数体</p></li></ul>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>cpp 语法</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>fill void</title>
+    <link href="/2024/01/15/fill-void/"/>
+    <url>/2024/01/15/fill-void/</url>
+    
+    <content type="html"><![CDATA[<p>those with lack of purpose fill void with pleasure!</p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="/2024/01/15/hello-world/"/>
+    <url>/2024/01/15/hello-world/</url>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  
+</search>
