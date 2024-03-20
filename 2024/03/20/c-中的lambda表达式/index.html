@@ -6,22 +6,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="Hexo">
-    <title>fill void - Hexo</title>
+    <title>c++中的lambda表达式 - Hexo</title>
     <meta name="author" content="John Doe">
     
     
     
-    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"John Doe","sameAs":["https://github.com/","http://stackoverflow.com/users","https://twitter.com/","https://facebook.com/","https://plus.google.com/","https://www.linkedin.com/profile/","mailto"]},"articleBody":"those with lack of purpose fill void with pleasure!\n","dateCreated":"2024-01-15T23:10:41+08:00","dateModified":"2024-01-15T23:12:01+08:00","datePublished":"2024-01-15T23:10:41+08:00","description":"","headline":"fill void","image":[],"mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2024/01/15/fill-void/"},"publisher":{"@type":"Organization","name":"John Doe","sameAs":["https://github.com/","http://stackoverflow.com/users","https://twitter.com/","https://facebook.com/","https://plus.google.com/","https://www.linkedin.com/profile/","mailto"]},"url":"http://example.com/2024/01/15/fill-void/"}</script>
-    <meta name="description" content="those with lack of purpose fill void with pleasure!">
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"John Doe","sameAs":["https://github.com/","http://stackoverflow.com/users","https://twitter.com/","https://facebook.com/","https://plus.google.com/","https://www.linkedin.com/profile/","mailto"]},"articleBody":"lambdalambda是表达式，但可以作为右值赋给一个变量，比如audo f = [] &#123;return 42&#125;，所以这里f到底是什么类型，需要调试才知道。简单来说lambda表达式相当于匿名函数，它可以接收输入参数，还能返回结果。具体地，lambda表达式分为四部分，公式为[capture list] (parameter list) -&gt; return type &#123; function body &#125;。其中 parameter list 和 return type 可以省略。下面分别介绍这四部分。\n\ncapture list这部分中文名称为 捕获列表 ，表示定义在其他函数内部的表达式可以使用该函数的局部变量。如下所示  \n  void outter (int input) &#123;\n      int localVar = input * 2;\n      auto f = [localVar] (int lambdaVal) -&gt; int &#123;return localVar + lambdaVal;&#125;;\n      printf (&quot;%d\\n&quot;, f(1));\n  &#125;\n\n\nparameter list这部分是基本的输入参数列表，与普通函数一致\n\nreturn type定义返回值类型\n\nfunction body函数体\n\n\n","dateCreated":"2024-03-20T21:51:04+08:00","dateModified":"2024-03-20T22:19:40+08:00","datePublished":"2024-03-20T21:51:04+08:00","description":"","headline":"c++中的lambda表达式","image":[],"mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2024/03/20/c-%E4%B8%AD%E7%9A%84lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F/"},"publisher":{"@type":"Organization","name":"John Doe","sameAs":["https://github.com/","http://stackoverflow.com/users","https://twitter.com/","https://facebook.com/","https://plus.google.com/","https://www.linkedin.com/profile/","mailto"]},"url":"http://example.com/2024/03/20/c-%E4%B8%AD%E7%9A%84lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F/","keywords":"c++ 语法"}</script>
+    <meta name="description" content="lambdalambda是表达式，但可以作为右值赋给一个变量，比如audo f &#x3D; [] &#123;return 42&#125;，所以这里f到底是什么类型，需要调试才知道。简单来说lambda表达式相当于匿名函数，它可以接收输入参数，还能返回结果。具体地，lambda表达式分为四部分，公式为[capture list] (parameter list) -&gt; return type &amp;#">
 <meta property="og:type" content="blog">
-<meta property="og:title" content="fill void">
-<meta property="og:url" content="http://example.com/2024/01/15/fill-void/index.html">
+<meta property="og:title" content="c++中的lambda表达式">
+<meta property="og:url" content="http://example.com/2024/03/20/c-%E4%B8%AD%E7%9A%84lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="those with lack of purpose fill void with pleasure!">
+<meta property="og:description" content="lambdalambda是表达式，但可以作为右值赋给一个变量，比如audo f &#x3D; [] &#123;return 42&#125;，所以这里f到底是什么类型，需要调试才知道。简单来说lambda表达式相当于匿名函数，它可以接收输入参数，还能返回结果。具体地，lambda表达式分为四部分，公式为[capture list] (parameter list) -&gt; return type &amp;#">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2024-01-15T15:10:41.000Z">
-<meta property="article:modified_time" content="2024-01-15T15:12:01.163Z">
+<meta property="article:published_time" content="2024-03-20T13:51:04.000Z">
+<meta property="article:modified_time" content="2024-03-20T14:19:40.214Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="c++ 语法">
 <meta name="twitter:card" content="summary">
     
     
@@ -318,14 +319,14 @@
         <div class="post-header main-content-wrap text-left">
     
         <h1 class="post-title">
-            fill void
+            c++中的lambda表达式
         </h1>
     
     
         <div class="post-meta">
-    <time datetime="2024-01-15T23:10:41+08:00">
+    <time datetime="2024-03-20T21:51:04+08:00">
 	
-		    Jan 15, 2024
+		    Mar 20, 2024
     	
     </time>
     
@@ -337,7 +338,23 @@
     
     <div class="post-content markdown">
         <div class="main-content-wrap">
-            <p>those with lack of purpose fill void with pleasure!</p>
+            <h2 id="lambda"><a href="#lambda" class="headerlink" title="lambda"></a>lambda</h2><p>lambda是表达式，但可以作为右值赋给一个变量，比如<code>audo f = [] &#123;return 42&#125;</code>，所以这里f到底是什么类型，需要调试才知道。简单来说lambda表达式相当于匿名函数，它可以接收输入参数，还能返回结果。具体地，lambda表达式分为四部分，公式为<code>[capture list] (parameter list) -&gt; return type &#123; function body &#125;</code>。其中 <em>parameter list</em> 和 <em>return type</em> 可以省略。下面分别介绍这四部分。</p>
+<ul>
+<li><p><em>capture list</em><br>这部分中文名称为 <em>捕获列表</em> ，表示定义在其他函数内部的表达式可以使用该函数的局部变量。如下所示  </p>
+<pre><code>  void outter (int input) &#123;
+      int localVar = input * 2;
+      auto f = [localVar] (int lambdaVal) -&gt; int &#123;return localVar + lambdaVal;&#125;;
+      printf (&quot;%d\n&quot;, f(1));
+  &#125;
+</code></pre>
+</li>
+<li><p><em>parameter list</em><br>这部分是基本的输入参数列表，与普通函数一致</p>
+</li>
+<li><p><em>return type</em><br>定义返回值类型</p>
+</li>
+<li><p><em>function body</em><br>函数体</p>
+</li>
+</ul>
 
             
 
@@ -346,20 +363,24 @@
     </div>
     <div id="post-footer" class="post-footer main-content-wrap">
         
+            <div class="post-footer-tags">
+                <span class="text-color-light text-small">TAGGED IN</span><br/>
+                
+    <a class="tag tag--primary tag--small t-none-link" href="/tags/c-%E8%AF%AD%E6%B3%95/" rel="tag">c++ 语法</a>
+
+            </div>
+        
         
             <div class="post-actions-wrap">
     <nav>
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    
-                <a
-                    class="post-action-btn btn btn--default tooltip--top"
-                    href="/2024/03/20/c-%E4%B8%AD%E7%9A%84lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F/"
-                    data-tooltip="c++中的lambda表达式"
-                    aria-label="PREVIOUS: c++中的lambda表达式"
-                >
-                    
+                    <a
+                        class="post-action-btn btn btn--disabled"
+                        aria-hidden="true"
+                    >
+                        
                         <i class="fa fa-angle-left" aria-hidden="true"></i>
                         <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
                     </a>
@@ -369,9 +390,9 @@
                     
                 <a
                     class="post-action-btn btn btn--default tooltip--top"
-                    href="/2024/01/15/hello-world/"
-                    data-tooltip="Hello World"
-                    aria-label="NEXT: Hello World"
+                    href="/2024/01/15/fill-void/"
+                    data-tooltip="fill void"
+                    aria-label="NEXT: fill void"
                 >
                     
                         <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
@@ -396,7 +417,7 @@
             <li class="post-action hide-xs">
                 <a
                     class="post-action-btn btn btn--default"
-                    target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://example.com/2024/01/15/fill-void/"
+                    target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://example.com/2024/03/20/c-%E4%B8%AD%E7%9A%84lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F/"
                     title="Share on Facebook"
                     aria-label="Share on Facebook"
                 >
@@ -409,7 +430,7 @@
             <li class="post-action hide-xs">
                 <a
                     class="post-action-btn btn btn--default"
-                    target="new" href="https://twitter.com/intent/tweet?text=http://example.com/2024/01/15/fill-void/"
+                    target="new" href="https://twitter.com/intent/tweet?text=http://example.com/2024/03/20/c-%E4%B8%AD%E7%9A%84lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F/"
                     title="Share on Twitter"
                     aria-label="Share on Twitter"
                 >
@@ -422,7 +443,7 @@
             <li class="post-action hide-xs">
                 <a
                     class="post-action-btn btn btn--default"
-                    target="new" href="https://plus.google.com/share?url=http://example.com/2024/01/15/fill-void/"
+                    target="new" href="https://plus.google.com/share?url=http://example.com/2024/03/20/c-%E4%B8%AD%E7%9A%84lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F/"
                     title="Share on Google+"
                     aria-label="Share on Google+"
                 >
@@ -467,14 +488,11 @@
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    
-                <a
-                    class="post-action-btn btn btn--default tooltip--top"
-                    href="/2024/03/20/c-%E4%B8%AD%E7%9A%84lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F/"
-                    data-tooltip="c++中的lambda表达式"
-                    aria-label="PREVIOUS: c++中的lambda表达式"
-                >
-                    
+                    <a
+                        class="post-action-btn btn btn--disabled"
+                        aria-hidden="true"
+                    >
+                        
                         <i class="fa fa-angle-left" aria-hidden="true"></i>
                         <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
                     </a>
@@ -484,9 +502,9 @@
                     
                 <a
                     class="post-action-btn btn btn--default tooltip--top"
-                    href="/2024/01/15/hello-world/"
-                    data-tooltip="Hello World"
-                    aria-label="NEXT: Hello World"
+                    href="/2024/01/15/fill-void/"
+                    data-tooltip="fill void"
+                    aria-label="NEXT: fill void"
                 >
                     
                         <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
@@ -511,7 +529,7 @@
             <li class="post-action hide-xs">
                 <a
                     class="post-action-btn btn btn--default"
-                    target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://example.com/2024/01/15/fill-void/"
+                    target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://example.com/2024/03/20/c-%E4%B8%AD%E7%9A%84lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F/"
                     title="Share on Facebook"
                     aria-label="Share on Facebook"
                 >
@@ -524,7 +542,7 @@
             <li class="post-action hide-xs">
                 <a
                     class="post-action-btn btn btn--default"
-                    target="new" href="https://twitter.com/intent/tweet?text=http://example.com/2024/01/15/fill-void/"
+                    target="new" href="https://twitter.com/intent/tweet?text=http://example.com/2024/03/20/c-%E4%B8%AD%E7%9A%84lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F/"
                     title="Share on Twitter"
                     aria-label="Share on Twitter"
                 >
@@ -537,7 +555,7 @@
             <li class="post-action hide-xs">
                 <a
                     class="post-action-btn btn btn--default"
-                    target="new" href="https://plus.google.com/share?url=http://example.com/2024/01/15/fill-void/"
+                    target="new" href="https://plus.google.com/share?url=http://example.com/2024/03/20/c-%E4%B8%AD%E7%9A%84lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F/"
                     title="Share on Google+"
                     aria-label="Share on Google+"
                 >
@@ -571,7 +589,7 @@
                     <a
                         class="share-option-btn"
                         target="new"
-                        href="https://www.facebook.com/sharer/sharer.php?u=http://example.com/2024/01/15/fill-void/"
+                        href="https://www.facebook.com/sharer/sharer.php?u=http://example.com/2024/03/20/c-%E4%B8%AD%E7%9A%84lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F/"
                         aria-label="Share on Facebook"
                     >
                         <i class="fab fa-facebook" aria-hidden="true"></i><span>Share on Facebook</span>
@@ -584,7 +602,7 @@
                     <a
                         class="share-option-btn"
                         target="new"
-                        href="https://twitter.com/intent/tweet?text=http://example.com/2024/01/15/fill-void/"
+                        href="https://twitter.com/intent/tweet?text=http://example.com/2024/03/20/c-%E4%B8%AD%E7%9A%84lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F/"
                         aria-label="Share on Twitter"
                     >
                         <i class="fab fa-twitter" aria-hidden="true"></i><span>Share on Twitter</span>
@@ -597,7 +615,7 @@
                     <a
                         class="share-option-btn"
                         target="new"
-                        href="https://plus.google.com/share?url=http://example.com/2024/01/15/fill-void/"
+                        href="https://plus.google.com/share?url=http://example.com/2024/03/20/c-%E4%B8%AD%E7%9A%84lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F/"
                         aria-label="Share on Google+"
                     >
                         <i class="fab fa-google-plus" aria-hidden="true"></i><span>Share on Google+</span>
